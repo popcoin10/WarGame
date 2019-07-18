@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public abstract class Game
 {
    private ArrayList<Player> players;// the players of the game
+//test//
 
    public Game (ArrayList<Player> players)
    {

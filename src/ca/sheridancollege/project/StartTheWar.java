@@ -29,7 +29,7 @@ public class StartTheWar
 
       //found interesting Java operation called List which can be broken down into sublists to store information. Just add the total # of cards needed in each sublist
       deck1.addAll(cardDeck.subList(0, 25));              //26 cards for p1       
-
+///test 5
       deck2.addAll(cardDeck.subList(26, cardDeck.size()));//26 cards for p2
 
       //Array for player objects to be held

@@ -9,6 +9,10 @@ public class Card
 
    public Card (int suit, int rank)
    {
+      /*
+       *
+       * testing 1,2,3
+       */
       this.rank = rank;
       this.suit = suit;
       this.imageURL = Integer.toString(rank);
