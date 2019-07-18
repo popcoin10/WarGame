@@ -14,40 +14,24 @@ public class War extends Game
 
    public void play ()
    {
-
       while (true) {
          if (this.getPlayers().get(0).getDeck().isEmpty()) {
             System.out.println(" Player 2 wins! ");
             break;
          }
          else if (this.getPlayers().get(1).getDeck().isEmpty()) {
-            System.out.println(" Player 1 wins!");
+            System.out.println(" Player 1 wins! ");
             break;
          }
-//         Card p1Card = null;
-//         Card p2Card = null;
-         //use pop to remove card from top of Linked List- thank god for Rich teaching us all this lol
-         //this is where error is
-//         if (this.getPlayers().get(0).getDeck().isEmpty() || this.getPlayers().get(1).getDeck().isEmpty()) {
-//            System.out.println(" Empty ");
-//         }
-//         else {
-//            p1Card = this.getPlayers().get(0).getDeck().pop();
-//            p2Card = this.getPlayers().get(1).getDeck().pop();
-//         }
 
          Card p1Card = this.getPlayers().get(0).getDeck().pop();  //each player place one card face up
-//         System.out.println("We are popping " + p1Card.toString());
          Card p2Card = this.getPlayers().get(1).getDeck().pop();
-//         System.out.println("We are popping " + p2Card.toString());
-
 
          //display the face up card
          System.out.println("Player 1 plays: " + p1Card.toString());
          System.out.println("Player 2 plays: " + p2Card.toString());
 
          //rank comparation between two cards
-         //
          if (p1Card.getCard() > p2Card.getCard()) {//if player 1 win 
             this.getPlayers().get(0).getDeck().add(p2Card);  //higher rank wins both cards and 
             this.getPlayers().get(0).getDeck().add(p1Card);  //places them at the bottom of his deck.
