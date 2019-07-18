@@ -1,18 +1,31 @@
-/**
- * SYST 17796 Project Winter 2019 Base code.
- * Students can modify and extend to implement their game.
- * Add your name as a modifier and the date!
- */
 package ca.sheridancollege.project;
 public class Card
 {
    private int rank; //initialize the rank (2,3,4...King, Ace)
    private int suit; //initialize the suit (spades, hearts...)
+   private String imageURL;
+
+
 
    public Card (int suit, int rank)
    {
       this.rank = rank;
       this.suit = suit;
+      this.imageURL = Integer.toString(rank);
+
+      if (suit == 0) {
+         this.imageURL += "S";
+      }
+      else if (suit == 1) {
+         this.imageURL += "H";
+      }
+      else if (suit == 2) {
+         this.imageURL += "C";
+      }
+      else if (suit == 4) {
+         this.imageURL += "D";
+      }
+      imageURL += ".png";
    }//end construcor
    //getter method
 
@@ -73,4 +86,12 @@ public class Card
       //return the result of an entire cmombined string
       return displayCard.toString();
    }//end toString
+
+   /**
+    * @return the imageURL
+    */
+   public String getImageURL ()
+   {
+      return imageURL;
+   }
 }
