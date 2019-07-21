@@ -4,7 +4,6 @@ package wargame;
  */
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 /**
@@ -26,21 +25,23 @@ public class StartTheWar
       Collections.shuffle(cardDeck, new Random()); //deck shuffler
 
       //using our newly learnt knowledge on Linked lists to create 2 - one for each player. player 1/player2
-      LinkedList<Card> deck1 = new LinkedList<>();
-      LinkedList<Card> deck2 = new LinkedList<>();
+
 
 
       //found interesting Java operation called List which can be broken down into sublists to store information. Just add the total # of cards needed in each sublist
-      deck1.addAll(cardDeck.subList(0, 25));              //26 cards for p1       
-///test 5
-      deck2.addAll(cardDeck.subList(26, cardDeck.size()));//26 cards for p2
 
       //Array for player objects to be held
       ArrayList<Player> p3 = new ArrayList<>();
-      Player p1 = new Player(deck1);
-      Player p2 = new Player(deck2);
+      Player p1 = new Player();
+      Player p2 = new Player();
+
+      p1.getDeck().addAll(cardDeck.subList(0, 25));              //26 cards for p1       
+///test 5
+      p2.getDeck().addAll(cardDeck.subList(26, cardDeck.size()));//26 cards for p2
       p3.add(p1);
       p3.add(p2);
+
+
 
       War game = new War(p3);
       game.play();

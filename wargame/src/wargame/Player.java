@@ -11,9 +11,9 @@ public class Player
 {
    private LinkedList<Card> deck;
 
-   public Player (LinkedList<Card> deck)
+   public Player ()
    {
-      this.deck = deck;
+      this.deck = new LinkedList<>();
    }
    //testt
 
