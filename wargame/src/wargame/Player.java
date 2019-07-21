@@ -9,11 +9,12 @@ import java.util.LinkedList;
 
 public class Player
 {
-   private LinkedList<Card> deck = new LinkedList();
+   private LinkedList<Card> deck;
 
    public Player ()
    {
-
+      LinkedList<Card> deck1 = new LinkedList();
+      this.deck = deck1;
    }
    //testt
 
