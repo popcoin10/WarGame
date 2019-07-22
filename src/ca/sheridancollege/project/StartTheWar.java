@@ -4,8 +4,9 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
+
 /**
- * @author Rich Smith at ZenOfProgramming.com
+ * @author Rich Smith at ZenOfProgramming.com hi
  */
 public class StartTheWar
 {
