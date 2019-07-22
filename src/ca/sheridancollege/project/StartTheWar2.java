@@ -32,10 +32,10 @@ public class StartTheWar2 extends Application
       HBox hBox = new HBox(5);
       hBox.setPadding(new Insets(5, 5, 5, 5));
       hBox.setStyle("-fx-background-color: blue");
-      ImageView im1 = new ImageView("https://cdn.shopify.com/s/files/1/0200/7616/products/playing-cards-tally-ho-circle-back-1_grande.png?v=1530155016");
+      ImageView im1 = new ImageView("https://www.mymagic.ch/wp-content/uploads/2017/01/Phoenix-Deck-back-2.png");
       ImageView im2 = new ImageView("https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/929/7C__93490.1440113539.480.480.png?c=2");
       ImageView im3 = new ImageView("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Playing_card_heart_2.svg/300px-Playing_card_heart_2.svg.png");
-      ImageView im4 = new ImageView("https://cdn.shopify.com/s/files/1/0200/7616/products/playing-cards-tally-ho-circle-back-1_grande.png?v=1530155016");
+      ImageView im4 = new ImageView("https://www.mymagic.ch/wp-content/uploads/2017/01/Phoenix-Deck-back-2.png");
       ImageView im5 = new ImageView("https://media.istockphoto.com/photos/three-of-hearts-picture-id624180018?k=6&m=624180018&s=612x612&w=0&h=-RqQPFrrvRmZks5Lbnh4dQUR2dts__KVQx84hj6A34I=");
 //      hBox.getChildren().add;
       hBox.getChildren().add(im1);
