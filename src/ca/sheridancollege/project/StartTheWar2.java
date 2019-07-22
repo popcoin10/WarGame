@@ -24,7 +24,7 @@ import javafx.stage.Stage;
  * @author m
  */
 public class StartTheWar2 extends Application
-{
+{//test
 
    @Override
    public void start (Stage primaryStage)
