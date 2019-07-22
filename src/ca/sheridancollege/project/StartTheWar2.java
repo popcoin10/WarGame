@@ -11,8 +11,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -29,29 +31,45 @@ public class StartTheWar2 extends Application
    {
       HBox hBox = new HBox(5);
       hBox.setPadding(new Insets(5, 5, 5, 5));
-      hBox.setStyle("-fx-background-color: gold");
-      hBox.getChildren().add(new ImageView(new Image(getClass().getResource("cards/red_back.png").toExternalForm())));
-      hBox.getChildren().add(new ImageView(new Image(getClass().getResource("cards/2H.png").toExternalForm())));
-      hBox.getChildren().add(new ImageView(new Image(getClass().getResource("cards/red_back.png").toExternalForm())));
-      hBox.getChildren().add(new ImageView(new Image(getClass().getResource("cards/3D.png").toExternalForm())));
+      hBox.setStyle("-fx-background-color: blue");
+      ImageView im1 = new ImageView("https://cdn.shopify.com/s/files/1/0200/7616/products/playing-cards-tally-ho-circle-back-1_grande.png?v=1530155016");
+      ImageView im2 = new ImageView("https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/929/7C__93490.1440113539.480.480.png?c=2");
+      ImageView im3 = new ImageView("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Playing_card_heart_2.svg/300px-Playing_card_heart_2.svg.png");
+      ImageView im4 = new ImageView("https://cdn.shopify.com/s/files/1/0200/7616/products/playing-cards-tally-ho-circle-back-1_grande.png?v=1530155016");
+      ImageView im5 = new ImageView("https://media.istockphoto.com/photos/three-of-hearts-picture-id624180018?k=6&m=624180018&s=612x612&w=0&h=-RqQPFrrvRmZks5Lbnh4dQUR2dts__KVQx84hj6A34I=");
+//      hBox.getChildren().add;
+      hBox.getChildren().add(im1);
+      hBox.getChildren().add(im2);
+      hBox.getChildren().add(im3);
+      hBox.getChildren().add(im4);
+////      hBox.getChildren().add(im5);
+//      hBox.getChildren().add(new ImageView("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Playing_card_heart_2.svg/300px-Playing_card_heart_2.svg.png"));
+//      hBox.getChildren().add(new ImageView("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Playing_card_heart_2.svg/300px-Playing_card_heart_2.svg.png"));
+//      hBox.getChildren().add(new ImageView("https://media.istockphoto.com/photos/three-of-hearts-picture-id624180018?k=6&m=624180018&s=612x612&w=0&h=-RqQPFrrvRmZks5Lbnh4dQUR2dts__KVQx84hj6A34I="));
 
 
+      HBox hBox1 = new HBox(5);
+      hBox.setPadding(new Insets(5, 5, 5, 5));
+      Button btFlip = new Button("Flip Card");
+
+      btFlip.setOnAction((ActionEvent event) -> {
+         //         System.out.println("Flip");
+         im2.setImage(new Image("https://s3-us-west-2.amazonaws.com/files.queenoftarot.com/production/tarot_cards/images/000/000/912/original/4-3.png?1469803887"));
+         im3.setImage(new Image("https://s3-us-west-2.amazonaws.com/files.queenoftarot.com/production/tarot_cards/images/000/000/912/original/4-3.png?1469803887"));
+      });
+
+      hBox1.getChildren().add(btFlip);
       Scene scene = new Scene(hBox);
+      hBox.getChildren().add(hBox1);
+
       primaryStage.setTitle("Show Image");
       primaryStage.setScene(scene);
       primaryStage.show();
-
-
-
    }
 
-   /**
-    * @param args the command line arguments
-    */
+
    public static void main (String[] args)
    {
-
-//      launch(args);
       System.out.println("Let the War begin!!!\n\nWe will now deal the cards. Best of luck to both players\n ");
       List<Card> cardDeck = new ArrayList<>();
 
@@ -63,13 +81,13 @@ public class StartTheWar2 extends Application
 
       Collections.shuffle(cardDeck, new Random()); //deck shuffler
 
+
       //using our newly learnt knowledge on Linked lists to create 2 - one for each player. player 1/player2
       LinkedList<Card> deck1 = new LinkedList<>();
       LinkedList<Card> deck2 = new LinkedList<>();
 
-
       //found interesting Java operation called List which can be broken down into sublists to store information. Just add the total # of cards needed in each sublist
-      deck1.addAll(cardDeck.subList(0, 25));              //26 cards for p1       
+      deck1.addAll(cardDeck.subList(0, 26));              //26 cards for p1       
 
       deck2.addAll(cardDeck.subList(26, cardDeck.size()));//26 cards for p2
 
@@ -82,6 +100,7 @@ public class StartTheWar2 extends Application
 
       War game = new War(p3);
       game.play();
+      launch(args);
 
    }
 
